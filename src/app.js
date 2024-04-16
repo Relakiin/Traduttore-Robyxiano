@@ -73,4 +73,5 @@ app.post('/translate', function (req, res) {
     }
 })
 
-app.listen(8080)
+const port = process.env.PORT || 3001
+app.listen(port)
