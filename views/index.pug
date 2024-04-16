@@ -1,0 +1,39 @@
+html 
+    head 
+        title Traduttore Robyxiano
+    body
+        h1 Traduttore Robyxiano
+
+        if normToTra
+            h2 Da: Italiano a: Robyxiano
+        else
+            h2 Da: Robyxiano a: Italiano 
+        
+        form(id="changeway", action="/translate", method="POST")
+            p 
+                input(type="hidden", id="currentway", name="currentway", value= normToTra)
+            button(type='submit', name='inverti', value="true") Inverti
+
+            if normToTra
+                p
+                    b 
+                        label(for="normal") Italiano
+                    br 
+                    textarea(name='normal', id='normal', rows='10', cols='50', readonly= !normToTra, style={"resize": "none"})= normalValue
+                    br
+                    b 
+                        label(for="translate") Robyxiano
+                    br
+                    textarea(name='translate', id='translate', rows='10', cols='50', readonly= normToTra, style={"resize": "none"})= translateValue
+            else 
+                p
+                    b 
+                        label(for="translate") Robyxiano
+                    br
+                    textarea(name='translate', id='translate', rows='10', cols='50', readonly= normToTra, style={"resize": "none"})= translateValue
+                    br
+                    b
+                        label(for="normal") Italiano
+                    br 
+                    textarea(name='normal', id='normal', rows='10', cols='50', readonly= !normToTra, style={"resize": "none"})= normalValue
+            button(type='submit', name='traduci', value="true") Traduci
