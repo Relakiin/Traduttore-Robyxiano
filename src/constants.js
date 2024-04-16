@@ -44,7 +44,9 @@ export const banned = [
     'poi',
     "c'è",
     'piccolo',
-    'come'
+    'come',
+    'uno',
+    'una'
 ]
 
 export const vocabolario = new Map([
