@@ -13,6 +13,8 @@ export function translate(text, normToTra) {
     })
 
     //MAPPA DEL VOCABOLARIO
+
+    //KEYS
     //le key sono le parole in italiano che vanno rimpiazzate. sono tutte string eccetto quando bisogna trovare una frase con 2 o piu parole, in quel caso
     //è un array di string che corrispondono alle parole individuali in sequenza.
 
@@ -25,6 +27,25 @@ export function translate(text, normToTra) {
     //trovata parola "fatti". la parola all'indice successivo è "sotto"?
     //si = sostituisci "fatti" e "sotto" nell'array con "appresentati"
     //no = aggiungi x
+
+    //ESEMPIO: "ciao matteo" => "ciaox piccolo matt"
+    //matteo è una chiave alla quale corrispondono: [ 'matteino', ['piccolo', 'matt'] ]
+    //controlla se l'indice scelto dal randomizer corrisponde ad un array
+    //si = sostituisci "matteo" con i contenuti dell'array
+    //no = sostituisci "matteo" con la string corrispondente
+
+    //VALUES
+    //le values sono le parole in robyxiano che corrispondono all'italiano. ad ogni key corrisponde un array di string, che contiene tutte
+    //traduzioni valide per quella parola, la traduzione viene scelta in modo randomico.
+
+    //idea: nell'array di string aggiungere un ulteriore array per quando ad una parola corrisponde una frase.
+    //ESEMPIO: Matteo => Piccolo Matt
+    //a 'matteo' corrispondono: [ 'matteino', ['piccolo', 'matt'] ]
+
+    //array frase esempio: ciaox, piccolo, matt, come, vax
+    //la parola "piccolo" corrisponde al primo indice dell'array piccolo matt. la parola dopo è matt?
+    //si = rimpiazza "piccolo" e "matt" con "matteo"
+    //no = segui la logica normale
 
     if (normToTra) {
         console.log('\nDA NORMALE A TRADOTTO\n')

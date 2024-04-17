@@ -36,15 +36,6 @@ app.post('/translate', function (req, res) {
     }
     let newWay = !normToTra
 
-    /*     console.log('\n###REQUEST BODY: ' + JSON.stringify(req.body))
-    console.log('Testo normale: ' + normalValue)
-    console.log('Testo tradotto: ' + translateValue)
-    console.log('normToTra: ' + normToTra)
-    console.log('New way: ' + newWay)
-    console.log('Traduci? ' + req.body.traduci)
-    console.log('Inverti? ' + req.body.inverti)
-    console.log('\n') */
-
     if (req.body.traduci == undefined) {
         //inverti verso traduzione
         console.log(newWay ? "VERSO ATTUALE: DA ITALIANO A ROBY" : "VERSO ATTUALE: DA ROBY A ITALIANO")
