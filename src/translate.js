@@ -12,6 +12,20 @@ export function translate(text, normToTra) {
         })
     })
 
+    //MAPPA DEL VOCABOLARIO
+    //le key sono le parole in italiano che vanno rimpiazzate. sono tutte string eccetto quando bisogna trovare una frase con 2 o piu parole, in quel caso
+    //è un array di string che corrispondono alle parole individuali in sequenza.
+
+    //ESEMPIO: [ ['test', ['fatti', 'sotto']], ['appresentati'] ] => questo sostituirà la parola 'test' con 'appresentati'
+    //e attiverà il controllo per la parola 'fatti' siccome non è una string ma un array
+
+    //idea: ricavare un array di parole dalla regex e controllare la parola successiva.
+    //ESEMPIO: "fatti sotto" => "appresentati"
+    //array: ciao, fatti, sotto, ciao
+    //trovata parola "fatti". la parola all'indice successivo è "sotto"?
+    //si = sostituisci "fatti" e "sotto" nell'array con "appresentati"
+    //no = aggiungi x
+
     if (normToTra) {
         console.log('\nDA NORMALE A TRADOTTO\n')
         //splitta il testo in righe

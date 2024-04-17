@@ -46,7 +46,8 @@ export const banned = [
     'piccolo',
     'come',
     'uno',
-    'una'
+    'una',
+    'però',
 ]
 
 export const vocabolario = new Map([
@@ -54,11 +55,11 @@ export const vocabolario = new Map([
     ['gianluca', ['zallu']],
     ['gianlu', ['zallu']],
     ['andiamo', ['amuni']],
-    ['fatti sotto', ['appresentati']],
+    [['fatti', 'sotto'], ['appresentati']],
     ['scacchi', ['smacchix']],
     ['carino', ['ducii', 'sapurito']],
     ['arancino', ['arancina']],
     ['arancini', ['arancine']],
-    ['matteo', ['matteino', 'piccolo Matt']],
+    ['matteo', ['matteino', ['piccolo', 'matt']]],
     ['meschino', ['povero']],
 ])
